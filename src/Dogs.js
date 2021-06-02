@@ -1,10 +1,12 @@
 import React from 'react';
 
-function Dogs() {
+function Dogs({image}) {
+
+
 
     return (
     <div>
-    
+    <img src={image} alt=""></img>
     </div>
     )
 }

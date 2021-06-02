@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import Dogs from './Dogs';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -9,15 +8,16 @@ function App() {
 useEffect(() => { 
   fetch("https://dog.ceo/api/breeds/image/random/15")
   .then(r => r.json())
-  .then((dogArr) => setDogs(dogArr));
+  .then((dogArr) => {setDogs(dogArr['message'])
+});
 },[]);
 
-console.log(dogs)
+
 const dogArray=dogs.map((dog) => {
   return (
     <Dogs
     key={dog.id}
-    image={dog.message}
+    image={dog}
     />
   )   
 });
@@ -26,19 +26,11 @@ const dogArray=dogs.map((dog) => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Dog Book <code>src/App.js</code> and save to reload.
-         dogArray={dogArray}
+          Dog Book
+         {dogArray}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+  
       </header>
     </div>
   );
