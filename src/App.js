@@ -12,7 +12,6 @@ useEffect(() => {
 });
 },[]);
 
-
 const dogArray=dogs.map((dog) => {
   return (
     <Dogs
@@ -25,13 +24,10 @@ const dogArray=dogs.map((dog) => {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Dog Book
-         {dogArray}
-        </p>
-  
-      </header>
+        <header>
+          <h1>Dog Book</h1>
+        </header>
+         <ul className="cards">{dogArray}</ul>
     </div>
   );
 }
