@@ -4,14 +4,14 @@ The DogBook
 This challenge will ask you to create a page full of dogs known as "The DogBook". It is legally not similar to any other page.
 
 Step 1:
-Open a new React app page by going to "react.new" in your browser
+X - Open a new React app page by going to "react.new" in your browser
 
 Step 2:
-Make an api call to the following API to get dog images
+X - Make an api call to the following API to get dog images
 https://dog.ceo/api/breeds/image/random/15
 
 Step 3:
-Render a centered header with the title "Welcome to the DogBook" with a padding bottom of 15
+X - Render a centered header with the title "Welcome to the DogBook" with a padding bottom of 15
 
 Step 4:
 Render a grid of dogs with their image, a fake name and a checkbox with the label "good boy?"

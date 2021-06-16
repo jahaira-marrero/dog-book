@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function Dogs({image}) {
+function Dogs({image, name}) {
     const [claps, setClaps] = useState(100)
     // const [profile, setProfile] = useState(false)
 
@@ -16,11 +16,12 @@ function Dogs({image}) {
     return (
         <li className="card"> 
             <div className="image">
-                <img src={image} alt=""></img>
+                <img src={image} alt={name}></img>
                 <button className="claps" onClick={handleClick}>
                 👏{claps}
                  </button>
             </div>
+            <h3>{name}</h3>
         </li>
     )
 }
