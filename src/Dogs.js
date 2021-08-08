@@ -8,11 +8,6 @@ function Dogs({image, name}) {
         setClaps(claps + 1)
     }
 
-    // function handleProfileClick(){
-    //    console.log(setProfile(!profile))
-    // }
-
-
     return (
         <li className="card"> 
             <div className="image">
